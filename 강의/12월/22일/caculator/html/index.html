@@ -3,8 +3,35 @@
 <head>
 	<title></title>
 	<script type="text/javascript" src="../js/calculator.js"></script>
+	<script type="text/javascript" src="../js/functions.js"></script>
 </head>
+<style>
+	.resultPosition{width:100%; height: 300px;}
+		.position1{width: 100%; height: 20%;}
+		.position2{width: 100%; height: 80%; background-color: gray;}
+		.resultText{font-size: 200px; color: red;}
+</style>
+
 <body>
-	<h1>index.html</h1>
+	<h1>간단 계산기 맹글기</h1>
+
+	<input type="text" id="inputNum1">
+	
+	<select name="operator" id="operator">
+    	<option value="1">+</option>
+    	<option value="2">-</option>
+   	 	<option value="3">x</option>
+    	<option value="4">/</option>
+	</select>
+	
+	<input type="text" id="inputNum2">
+	<button onclick="solve()">결과</button>
+
+	<div class="resultPosition">
+		<div class="position1"></div>
+		<div class="position2">
+			<div class="resultText"><p id="res"></p></div>
+		</div>
+	</div>
 </body>
 </html>
