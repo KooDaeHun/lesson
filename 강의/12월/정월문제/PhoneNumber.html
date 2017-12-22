@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PhoneNumber</title>
+</head>
+<body>
+	이름 입력 : <input type="text" id="nm"/>
+
+	<button onclick="solve()">조회</button>
+	<p id = "result"></p>
+
+
+
+	<script>
+		var storage = [["a", "486461351"], ["", 010555555555], ["c", "651651861"], ["d", "01055556584"]];
+		var ment;
+
+		function solve(){
+			var name = document.getElementById('nm').value;
+
+			for(i = 0; i < 4; i++){
+				if(storage[i][0] == name){
+					ment = storage[i][1];
+					break;
+				} else {
+					ment = "없는 이름입니다. 이름을 다시 확인해주세요."
+				}
+			}
+
+			document.getElementById('result').innerHTML = ment;
+		}	
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

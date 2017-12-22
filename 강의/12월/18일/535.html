@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<input type="text" id="inputKg">
+
+	<button onclick="solve()">출력</button>
+
+	<p id="result"></p>
+
+<script>
+	var ment;
+
+	function solve() {
+		var kg = parseInt(document.getElementById('inputKg').value);
+
+		if(kg>=0 && kg<=50.80){
+			ment = "Flyweight"
+		} else if(kg<=61.32){
+			ment = "Lightweight"
+		} else if(kg<=72.57 && kg>61.32){
+			ment = "Middleweight"
+		} else if(kg<=88.45 && kg>72.57){
+			ment = "Cruiserweight"
+		} else if(kg>88.45){
+			ment = "HeavyWeight"
+		} 
+		document.getElementById('result').innerHTML = ment;
+	}
+
+
+		
+
+</script>
+</body>
+</html>

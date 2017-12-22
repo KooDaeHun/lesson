@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>131</title>
+</head>
+<body>
+	<input type="text" id="inputNum1">
+	<input type="text" id="inputNum2">
+
+	<button onclick="solve()">출력</button>
+	<p id="result"></p>
+
+
+<script>
+	var ment=" ";
+
+	function solve(){
+	var num1 = parseInt(document.getElementById('inputNum1').value);
+	var num2 = parseInt(document.getElementById('inputNum2').value);
+
+	if(num1 > num2){
+		var temp = num1;
+		var num1 = num2;
+		var num2 = temp;
+	}
+
+	for(var i=num1; i<=num2; i++){
+		ment += i + " ";
+	}
+
+	document.getElementById('result').innerHTML = ment;
+	ment = " ";
+	}
+
+</script>
+
+
+</body>
+</html>

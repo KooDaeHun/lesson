@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<input type="text" id="inputYear">
+
+	<button onclick="solve()">출력</button>
+
+	<p id="result"></p>
+
+<script>
+	var ment;
+
+
+	function solve() {
+		var data = parseInt(document.getElementById('inputYear').value);
+
+		if((data % 400) == 0) {
+			ment = "leap year";
+		} else if(data%4 == 0 || data%100 != 0){
+			ment = "leap year";
+		} else {
+			ment = "nomal year";
+		}
+		
+
+		document.getElementById('result').innerHTML = ment;
+
+	}
+
+</script>
+</body>
+</html>

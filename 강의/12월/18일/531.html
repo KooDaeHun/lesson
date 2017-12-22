@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<input type="text" id="inputKg">
+
+	<button onclick="solve()">출력</button>
+
+	<p id="result"></p>
+
+<script>
+	// 각각의 체급을 저장해서 출력할 때 사용하는 변수.
+	var ment;
+	// 상수로 선언된 체급 기준
+	var FLY_WEIGHT = 50.80;
+	var LIGHT_WEIGHT = 61.23;
+	var MIDDLE_WEIGHT = 72.57;
+	var CRUISER_WEIGHT = 88.45;
+	var HEAVY_WEIGHT;
+	
+	var FLY_WEIGHT_STR = "Flyweight";
+	var LIGHT_WEIGHT_STR = "Lightweight";
+	var MIDDLE_WEIGHT_STR = "Middleweight";
+	var CRUISER_WEIGHT_SRT = "Cruiserweight";
+	var HEAVY_WEIGHT_STR = "HeavyWeight";
+
+	function solve() {
+		// 사용자가 입력한 최초 데이터 'inputKg'
+		var kg = parseFloat(document.getElementById('inputKg').value);
+
+		// 문자냐, 숫자냐를 판단하는 큰 if문. 문자가 아니면 중첩 if문 실행
+		if(isNaN(kg) == false){
+			// 
+			if(kg>=0 && FLY_WEIGHT){
+				ment = FLY_WEIGHT_STR;
+			} 
+			else if(kg<=LIGHT_WEIGHT){
+				ment = LIGHT_WEIGHT_STR;
+			} 
+			else if(kg<= MIDDLE_WEIGHT){
+				ment =  MIDDLE_WEIGHT_STR;
+			} 
+			else if(kg<=CRUISER_WEIGHT){
+				ment = CRUISER_WEIGHT_SRT;
+			} 
+			else if(kg>HEAVY_WEIGHT){
+				ment = HEAVY_WEIGHT_STR;
+			} 
+			else{
+				ment = "0kg 미만입니다.";
+			}
+		} else {
+			ment = "문자를 입력하셨습니다.";
+		}
+		// 출력해줄 문자.
+		document.getElementById('result').innerHTML = ment;
+	}
+
+</script>
+</body>
+</html>

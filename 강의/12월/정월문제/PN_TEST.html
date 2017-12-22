@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>korean</title>
+</head>
+<body>
+	이름 입력 : <input type="text" id="nm"/>
+
+	<button onclick="solve()">조회</button>
+	<p id = "result"></p>
+
+
+	<script>
+		var ment;
+
+		function solve(){
+			var name = document.getElementById('nm').value;
+			if(name == "구대훈"){
+				ment = "일치함";
+			} else {
+				ment = "틀림";
+			}
+
+			document.getElementById('result').innerHTML = ment;
+		}
+	</script>
+</body>
+</html>

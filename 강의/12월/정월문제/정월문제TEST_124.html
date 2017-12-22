@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>124</title>
+</head>
+<body>
+	MONTH입력 : <input type ="text" id = "month"/>
+
+	<button onclick="solve()">날수보기</button>
+	<p id = "result1"></p>
+	<p id = "result2"></p>
+	<p id = "result124"></p>
+
+
+	<script>
+		var days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+		function solve(){
+			var mon = document.getElementById('month').value; 
+			var day = Number(mon)-1;
+			var month = mon + "월";
+
+			var spr;
+
+			if(mon >= 3 && mon <= 5){
+				spr = "봄";
+			} else if(mon >= 6 && mon <= 8){
+				spr = "여름";
+			} else if(mon >= 9 && mon <= 11){
+				spr = "가을";
+			} else {
+				spr = "겨울";
+			}
+
+
+
+			document.getElementById('result1').innerHTML = spr;
+			document.getElementById('result2').innerHTML = month;
+			document.getElementById('result124').innerHTML = days[day];
+
+		}
+	</script>
+</body>
+</html>

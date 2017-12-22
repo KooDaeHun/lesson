@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>109</title>
+</head>
+
+<body>
+	숫자입력 : <input type="text" id="num1"/> 
+	<input type="text" id="num2"/> 
+	<input type="text" id="num3"/>
+
+	<button onclick="solve()">출력</button>
+	<p id="result109"></p>
+	<p id="result109_1"></p>
+
+<script>
+	function solve(){
+		var num1 = document.getElementById('num1').value;
+		var num2 = document.getElementById('num2').value;
+		var num3 = document.getElementById('num3').value;
+
+
+		var sum = Number(num1)+Number(num2)+Number(num3);
+		var avg = Number(sum)/3;
+
+
+		document.getElementById('result109').innerHTML = sum;
+		document.getElementById('result109_1').innerHTML = avg;
+	}
+
+</script>
+
+</body>
+</html>

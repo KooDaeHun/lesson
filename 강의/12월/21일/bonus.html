@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bonus</title>
+</head>
+<body>
+	<input type="text" id="inputMail"></p>
+
+	<button onclick="solve()">출력</button>
+
+	<p id="result1"></p>
+	<p id="result2"></p>
+<script>
+	function solve() {
+		var mail = document.getElementById('inputMail').value;
+		var mailArray = mail.split('@');
+		console.log(mailArray[0]);
+		console.log(mailArray[1]);
+
+	document.getElementById('result1').innerHTML = "메일id : "+mailArray[0];
+	document.getElementById('result2').innerHTML = "도메인 : "+mailArray[1];
+	}
+</script>
+</body>
+</html>

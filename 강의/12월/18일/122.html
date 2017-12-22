@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<input type="text" id="inputData">
+
+	<button onclick="solve()">출력</button>
+
+	<p id="result"></p>
+
+<script>
+	var ment;
+
+	function solve() {
+		var data = parseInt(document.getElementById('inputData').value);
+
+		switch(data){
+			case 4.5:
+				ment = "scholarship"; 
+				break;
+			case 4.0:
+				ment = "scholarship"; 
+				break;
+			case 3.0:
+				ment = "next semester";	
+				break;
+			case 2.0:
+				ment = "seasonal semester";
+				break;
+			case 0.0:
+				ment = "retake";
+				break;
+			
+			default:
+				ment = "0.0 ~ 4.5까지의 숫자를 입력하시오.";
+				break;
+		}	
+
+		document.getElementById('result').innerHTML = ment;
+	}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>528</title>
+</head>
+<body>
+	숫자입력 : <input type="text" id="num"/>
+
+	<button onclick="solve()">출력</button>
+	<p id="result522"></p>
+	<p id="result528"></p>
+
+	<script>
+		
+		function solve(){
+				var num = document.getElementById('num').value;
+				
+				var mi = "minus";
+				var pl = "plus";
+
+				document.getElementById('result522').innerHTML = num;
+				
+				if(num < 0){
+					document.getElementById('result528').innerHTML = mi;
+				} else {
+					document.getElementById('result528').innerHTML = pl;
+				}
+
+			}
+
+	</script>
+
+</body>
+</html>

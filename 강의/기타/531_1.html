@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<input type="text" id="inputKg">
+
+	<button onclick="solve()">출력</button>
+
+	<p id="result"></p>
+
+<script>
+	// 각각의 체급을 저장해서 출력할 때 사용하는 변수.
+	var ment;
+	var a;
+	// 상수로 선언된 체급 기준
+	var FLY_WEIGHT = 50.80;
+	var LIGHT_WEIGHT = 61.23;
+	var MIDDLE_WEIGHT = 72.57;
+	var CRUISER_WEIGHT = 88.45;
+	var HEAVY_WEIGHT;
+	
+	var FLY_WEIGHT_STR = "Flyweight";
+	var LIGHT_WEIGHT_STR = "Lightweight";
+	var MIDDLE_WEIGHT_STR = "Middleweight";
+	var CRUISER_WEIGHT_SRT = "Cruiserweight";
+	var HEAVY_WEIGHT_STR = "HeavyWeight";
+	var kg = parseFloat(document.getElementById('inputKg').value);
+	
+	function solve() {
+		document.getElementById('result').innerHTML = dicision(kg);
+	}
+	
+	function dicision(a) {
+			if(a>=0 && FLY_WEIGHT){
+				ment = FLY_WEIGHT_STR;
+			} 
+			else if(a<=LIGHT_WEIGHT){
+				ment = LIGHT_WEIGHT_STR;
+			} 
+			else if(a<= MIDDLE_WEIGHT){
+				ment =  MIDDLE_WEIGHT_STR;
+			} 
+			else if(a<=CRUISER_WEIGHT){
+				ment = CRUISER_WEIGHT_SRT;
+			} 
+			else if(a>HEAVY_WEIGHT){
+				ment = HEAVY_WEIGHT_STR;
+			}
+
+			return ment;
+		}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>532</title>
+</head>
+<body>
+	학점 : <input type="text" id="point1"/>
+		   <input type="text" id="point2"/>
+	<button onclick="solve()">조회</button>
+	<p id="result"></p>
+
+
+	<script>
+		var res;
+		function solve(){
+			var num1 = document.getElementById('point1').value;
+			var num2 = document.getElementById('point2').value;
+
+			if(num1 >= 4.0 && num2 >= 4.0){
+				res = "A";
+			} else if(num1 >= 3.0 && num2 >= 3.0){
+				res = "B";
+			} else {
+				res = "C";
+			}
+
+			document.getElementById('result').innerHTML = res;
+		}
+
+	</script>
+</body>
+</html>

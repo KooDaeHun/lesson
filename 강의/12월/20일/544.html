@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TEST</title>
+</head>
+<body>
+	<input type="text" id="inputNum">
+	<button onclick="solve()">출력</button>
+	<p id="result"></p>
+
+
+<script>
+
+	var ment = 0;
+	
+	function solve() {
+		var num = parseInt(document.getElementById('inputNum').value);
+		for(var i=num; i<101; i++){
+			ment += i;
+		}
+		document.getElementById('result').innerHTML = ment;
+
+	}
+
+</script>
+</body>
+</html>

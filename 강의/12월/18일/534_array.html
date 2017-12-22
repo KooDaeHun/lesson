@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>534_1</title>
+</head>
+<body>
+	<input type="text" id="inputData">
+
+	<button onclick="solve()">출력</button>
+
+	<p id="result"></p>
+
+<script>
+	var ment;
+
+	function solve() {
+		var inData = document.getElementById('inputData').value;
+		var dataArray = ["Ecellent", "Good", "Usually", "Effort", "Failure"];
+
+		switch(inData){
+			case "A":
+			ment = dataArray[0];
+			break;
+			case "B":
+			ment = dataArray[1];
+			break;
+			case "C":
+			ment = dataArray[2];
+			break;
+			case "D":
+			ment = dataArray[3];
+			break;
+			case "E":
+			ment = dataArray[4];
+			break;
+			default:
+			ment = "erro";
+			break;
+		}
+		document.getElementById('result').innerHTML = ment;
+	}
+
+
+		
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>디버깅</title>
+</head>
+<body>
+
+
+
+	<input type="text" id="input"/>
+	<button onclick="solve()">출력</button>
+
+
+<script>
+	var num;
+	var ment;
+
+	function solve(){
+		var text = document.getElementById('input').value;
+
+		for(var i=5; i<0; i--){
+			for(var j = 1; j < i; j++){
+				text = text + "*";
+			}
+			console.log(text);
+			star = "*"
+		}
+	}
+
+</script>
+
+</body>
+</html>

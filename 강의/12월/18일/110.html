@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<input type="text" id="inputYard">
+
+	<button onclick="solve()">출력</button>
+
+	<p id="result1"></p>
+	<p id="result2"></p>
+
+<script>
+	var ment;
+
+	function solve() {
+		var yard = parseFloat(document.getElementById('inputYard').value);
+
+		ment = yard+"yard = "+(yard * 91.44).toFixed(1)+"cm";
+
+		document.getElementById('result1').innerHTML = yard;
+		document.getElementById('result2').innerHTML = ment;
+	}
+	
+	
+
+</script>
+</body>
+</html>

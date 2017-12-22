@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>529</title>
+</head>
+<body>
+	키 : <input type="text" id="cm"/>
+	몸무게 : <input type="text" id="kg"/>
+
+	<button onclick="solve()">출력</button>
+	<p id="result532"></p>
+	<p id="result533"></p>
+
+	<script>
+
+		var ob = "Obesity";
+
+		function solve(){
+			
+			var cm = document.getElementById('cm').value;
+			var kg = document.getElementById('kg').value;
+
+			var bmi = Number(kg) + 100 - Number(cm);
+			
+			// var bmi2 = eval("kg + 100 - cm"); (X)
+			// 참조값으로 eval을 쓰려면 변수에 바로 입력된 수가 아니라 받아오는 참조값이라서 Number로 정확히 숫자로 바꿔줘야함.
+			// var a = Number(cm);  -->숫자화
+			// var b = Number(kg);  -->숫자화
+			// var bmi = eval("a + 100 - b");
+
+			if(bmi > 0){
+				document.getElementById('result532').innerHTML = bmi;
+				document.getElementById('result533').innerHTML = ob;
+			}
+		}
+
+	</script>
+
+</body>
+</html>

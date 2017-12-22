@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>정보올림피아드 문제 풀이</title>
+</head>
+<body>
+	<h3>501: 출력 - 자가진단 1</h3>
+	<h5>아래 "출력 예"와 같이 출력되는 프로그램을 작성하시오.</h5>
+	<h6>출력 예 : </h6><br/>
+	<h6>Fun Programming!</h6>
+	
+	<h2>풀이 ----------------------------</h2>
+
+	<button onclick="solve()">출력</button>
+	<p id="result501"></p>
+
+	<script>
+		
+			function solve(){
+				var text = "Fun Programming!";
+				document.getElementById('result501').innerHTML = text;
+			}
+
+	</script>
+
+	<h3>533: 선택제어문 - 자가진단 1</h3>
+	<h5>남자는 'M' 여자는 'F'로 나타내기로 하고 18세 이상을 성인이라고 하자.
+성별('M', 'F')과 나이를 입력받아 "MAN"(성인남자), "WOMAN"(성인여자), "BOY"(미성년남자), "GIRL"(미성년여자)을 구분하여 출력하는 프로그램을 작성하시오.</h5>
+	<h6>입력 예 : </h6><br/>
+	<h6>F 15!</h6>
+	<h6>GIRL</h6>
+	
+	<h2>풀이 ----------------------------</h2>
+	
+
+	성별 : <input type="text" id="gender"/>
+	나이 : <input type="text" id="age"/>
+
+	<button onclick="solve();">출력</button>
+	<p id="result533"></p>
+
+	<script>
+		
+			function solve(){
+				var gender = document.getElementById('gender').value;
+				var age = document.getElementById('age').value;
+
+
+				// 성인 구분 기준
+				var adultAge = 18;
+
+				// 출력 데이터
+				var man = "MAN";
+				var woman = "WOMAN";
+				var boy = "BOY";
+				var girl = "GIRL";
+
+				if(gender >= adultAge){
+					if(gender == "M"){
+						document.getElementById('result533').innerHTML = man;
+					} 
+					if(gender == "F"){
+						document.getElementById('result533').innerHTML = woman;
+					}
+
+				} else{
+					if(gender == "M"){
+						document.getElementById('result533').innerHTML = boy;
+					} 
+					if(gender == "F"){
+						document.getElementById('result533').innerHTML = girl;
+					}
+				}
+
+			}
+
+	</script>
+
+<hr/>
+
+</body>
+</html>

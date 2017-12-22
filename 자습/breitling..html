@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>115</title>
+</head>
+<body>
+
+	브랜드 <input type="text" id="inputBrand">
+
+
+	<button onclick="solve()">검색</button>
+	<p id="result"></p>
+
+<script>
+	var superocean = (image.src = "http://www.naver.com");
+	var brandArray = [["브라이틀링", superocean]];
+	var ment;
+
+	function solve(){
+		var brand = document.getElementById('inputBrand').value; 
+		console.log(brand);
+
+		if(brand == brandArray[0][0]){
+			ment = "브라이틀링";
+		}
+
+
+		document.getElementById('result').innerHTML = ment;
+	}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>544</title>
+</head>
+<body>
+
+
+
+	<input type="text" id="input"/>
+	<button onclick="solve()">출력</button>
+	<p id="result"></p>
+
+<script>
+	var sum = 0;
+
+	function solve(){
+		var num = parseInt(document.getElementById('input').value);
+
+		for(i=num; i<5; i++){
+			sum = num + i;
+		}
+
+		document.getElementById('result').innerHTML = sum;
+	}
+
+</script>
+
+</body>
+</html>

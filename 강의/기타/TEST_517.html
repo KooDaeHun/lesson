@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>509</title>
+</head>
+<body>	
+
+	<input type="text" id="num1">
+	<input type="text" id="num2">
+	<input type="text" id="num3">
+
+	<button onclick="solve()">출력</button>
+
+	<p id='result1'></p>
+	<p id='result2'></p>
+	<p id='result3'></p>
+
+<script>
+	function solve() {
+
+		var n1 = (parseFloat(document.getElementById('num1').value)).toFixed(3);
+		var n2 = (parseFloat(document.getElementById('num2').value)).toFixed(3);
+		var n3 = (parseInt(document.getElementById('num3').value)).toFixed(3);
+
+		document.getElementById('result1').innerHTML = n1;
+		document.getElementById('result2').innerHTML = n2;
+		document.getElementById('result3').innerHTML = n3;
+	
+	}
+
+
+
+
+</script>
+</body>
+</html>

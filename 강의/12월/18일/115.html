@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>115</title>
+</head>
+<body>
+
+	민수 : <input type="text" id="inputMinsuCm">
+		   <input type="text" id="inputMinsuKg">
+	기영이 : <input type="text" id="inputGiyungCm">
+			 <input type="text" id="inputGiyungKg">
+
+	<button onclick="solve()">출력</button>
+	<p id="result"></p>
+
+<script>
+	var compareMent;
+	var bool;
+
+	function solve(){
+		var minsuCm = parseInt(document.getElementById('inputMinsuCm').value); 
+		var minsuKg = parseInt(document.getElementById('inputMinsuKg').value);
+		var giyungCm = parseInt(document.getElementById('inputGiyungCm').value);
+		var gitungKg = parseInt(document.getElementById('inputGiyungKg').value);
+
+		if(minsuKg>gitungKg && minsuCm>giyungCm){
+			compareMent = 1;
+		} else {
+			compareMent = 0;
+		}
+
+		document.getElementById('result').innerHTML = compareMent;
+	}
+
+
+</script>
+
+</body>
+</html>
