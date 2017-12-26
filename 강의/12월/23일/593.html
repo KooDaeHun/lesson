@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="inputNum"></p>
+
+	<button onclick="solve()">출력</button>
+
+	<p id="result"></p>
+
+<script>	
+	 function solve() {
+	 	var ment="";
+		var srt = Number(document.getElementById('inputNum').value);
+
+		if(srt>32 && srt<128) {
+			ment = String.fromCharCode(srt);
+		} else {
+			ment = "입력된 수가 33~127 범위를 벗어납니다.";
+		}
+
+		document.getElementById('result').innerHTML = ment;
+	}
+
+
+		
+
+</script>
+</body>
+</html>

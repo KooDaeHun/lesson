@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>597</title>
+</head>
+<body>
+	<input type="text" id="inputStr1"></p>
+	<input type="text" id="inputStr2"></p>
+
+	<button onclick="solve()">출력</button>
+
+	<p id="result"></p>
+
+<script>	
+	 function solve() {
+	 	var ment="";
+
+		var srt1 = String(document.getElementById('inputStr1').value);
+		var srt2 = String(document.getElementById('inputStr2').value);
+		var sumLeng = Number(srt1.length + srt2.length)
+
+		if(sumLeng < 20) {
+			ment = sumLeng;
+		} else {
+			ment = "문자열의 길이가 20자를 넘습니다.";
+		}
+		
+
+		document.getElementById('result').innerHTML = ment;
+	}
+
+
+		
+
+</script>
+</body>
+</html>

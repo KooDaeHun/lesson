@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>602</title>
+</head>
+<body>
+	<input type="text" id="inputStr1"></p>
+	<input type="text" id="inputStr2"></p>
+	<input type="text" id="inputStr3"></p>
+	<input type="text" id="inputStr4"></p>
+	<input type="text" id="inputStr5"></p>
+
+	<button onclick="solve()">출력</button>
+
+	<p id="result1"></p>
+	<p id="result2"></p>
+	<p id="result3"></p>
+	<p id="result4"></p>
+	<p id="result5"></p>
+
+
+<script>	
+	 function solve() {
+		var strArray = [simpleInput('inputStr1'),simpleInput('inputStr2'),simpleInput('inputStr3'),simpleInput('inputStr4'),simpleInput('inputStr5')];
+		var ment0;
+		var ment1;
+		var ment2;
+		var ment3;
+		var ment4;
+		var mentArray = [ment0, ment1, ment2, ment3, ment4];
+
+		for(var i=4; i>=0; i--){
+			mentArray[i] = strArray[i];
+		}
+
+		document.getElementById('result1').innerHTML = mentArray[4];
+		document.getElementById('result2').innerHTML = mentArray[3];
+		document.getElementById('result3').innerHTML = mentArray[2];
+		document.getElementById('result4').innerHTML = mentArray[1];
+		document.getElementById('result5').innerHTML = mentArray[0];
+	}
+
+	function simpleInput(a){
+		return String(document.getElementById(a).value);
+	}
+		
+
+</script>
+</body>
+</html>

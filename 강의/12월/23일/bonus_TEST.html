@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bonus</title>
+</head>
+<body>
+	<input type="text" id="inputMail"></p>
+
+	<button onclick="solve()">출력</button>
+
+	<p id="result1"></p>
+	<p id="result2"></p>
+<script>
+	function solve() {
+		var ment1 = "";
+		var ment2 = "";
+		var mentAlpa = "";
+
+		var mail = document.getElementById('inputMail').value;
+		var mailArray = [];
+		mailArray = mail;
+
+		for(i=0; i<mailArray.length; i++){
+			if(mailArray[i] == "@"){
+				mentAlpa = mailArray[i];
+			} else if(mentAlpa == "@"){
+				ment2 += mailArray[i];
+			} else{
+				ment1 += mailArray[i];
+			}
+		}
+		document.getElementById('result1').innerHTML = "메일id : "+ment1;
+		document.getElementById('result2').innerHTML = "도메인 : "+ment2;
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" id="inputStr"></p>
+
+	<button onclick="solve()">출력</button>
+
+	<p id="result"></p>
+
+<script>	
+	 function solve() {
+	 	var ment="";
+
+		var str = String(document.getElementById('inputStr').value);
+
+		if(str.length <= 100){
+			ment = str + str;
+		}else{
+			ment = "문자열의 길이가 100자를 넘습니다.";
+		}
+
+
+		document.getElementById('result').innerHTML = ment;
+	}
+
+
+		
+
+</script>
+</body>
+</html>
